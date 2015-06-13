@@ -61,3 +61,32 @@ def f1():
 def f2():
     pass
 
+
+# TODO: print log before and after func()
+def logger(ins):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print("begin call")
+            res = func(*args, **kw)
+            print("end call")
+            return res
+        return wrapper
+    if callable(ins):
+        return decorator(ins)
+    else:
+        print(ins)
+        return decorator
+
+
+@logger
+def now1():
+    print("2015")
+
+
+@logger("hello world")
+def now2():
+    print("2015")
+
+now2()
+now2()
