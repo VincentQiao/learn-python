@@ -1,0 +1,8 @@
+# python
+*.pyc
+.idea
+.project
+.pydevproject
+.settings/
+*.log
+*~
