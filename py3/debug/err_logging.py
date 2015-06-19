@@ -11,9 +11,9 @@ def bar(s):
 
 def main():
     try:
-         bar('0')
+        bar('0')
     except Exception as e:
         logging.exception(e)
-
+        # print('exception!', e)
 main()
 print('END')

@@ -7,9 +7,9 @@ class ListMetaclass(type):
         attrs['add'] = lambda self, value: self.append(value)
         return type.__new__(cls, name, bases, attrs)
 
-class Mylist(list, metaclass=ListMetaclass):
+class MyList(list, metaclass=ListMetaclass):
     pass
 
-L = Mylist()
+L = MyList()
 L.add(1)
 print(L)
