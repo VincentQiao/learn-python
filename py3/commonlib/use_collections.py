@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Vincent'
 
-from collections import namedtuple, deque, defaultdict, OrderedDict, Counter
+from collections import namedtuple, deque, defaultdict, OrderedDict, Counter, Iterator, Iterable
 Point = namedtuple('Point', ['x', 'y'])
 p = Point(1, 2)
 print(p.x, p.y)
