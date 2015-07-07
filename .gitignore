@@ -6,4 +6,5 @@
 .pydevproject
 .settings/
 *.log
+.diea/*
 *~
