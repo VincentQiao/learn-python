@@ -3,6 +3,7 @@ __author__ = 'vincent'
 
 import socket
 import threading
+import time
 
 def tcplink(sock, addr):
     print('Accept new connection from %s:%s...' % addr)
@@ -18,7 +19,7 @@ def tcplink(sock, addr):
 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind('127.0.0.1', 9999)
+s.bind(('127.0.0.1', 9999))
 s.listen(5)
 print('Waiting for connection...')
 while True:
